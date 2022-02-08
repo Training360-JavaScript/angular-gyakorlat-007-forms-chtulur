@@ -13,15 +13,20 @@
     </thead>
     <tbody>
       <tr *ngFor="let event of eventList | async">
-        <td>{{event.name}}</td>
-        <td>{{event.date}} </td>
-        <td>{{event.time}}</td>
-        <td>{{event.location}}</td>
+        <td>{{ event.name }}</td>
+        <td>{{ event.date }}</td>
+        <td>{{ event.time }}</td>
+        <td>{{ event.location }}</td>
         <td>
-
+          <button
+            (click)="onSelect(event)"
+            routerLink="/event"
+            class="btn btn-primary"
+          >
+            Edit
+          </button>
         </td>
       </tr>
     </tbody>
   </table>
-
 </div>
